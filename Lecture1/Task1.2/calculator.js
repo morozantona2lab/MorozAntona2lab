@@ -65,7 +65,7 @@ function eq(){
 				y=1;
 				while(i<x){
 					i+=1;
-					y=y*x;
+					y=y*i;
 				}
 			document.getElementById('res').innerHTML=y;
 		}
