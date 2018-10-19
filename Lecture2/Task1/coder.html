@@ -6,13 +6,11 @@
 		<script src="coder.js"></script>
 	</head>
 	<body>
-		<p>Зашифрувати</p>
-		<textarea oninput="encrypt()" type="text" id="text1"></textarea>
-		<input type="text" onchange="encrypt()" id="number1">
-		<textarea id="retext1"></textarea>
-		<p>Розшифрувати</p>
-		<textarea oninput="decrypt()" type="text" id="text2"></textarea>
-		<input type="text" onchange="decrypt()" id="number2">
-		<textarea id="retext2"></textarea>
+		<textarea type="text" id="text"></textarea>
+		<input type="text" id="number">
+		<textarea id="retext"></textarea>
+		<br>
+		<button onclick="encrypt()">Розшифрувати</button>
+		<button onclick="decrypt()">Зашифрувати</button>
 	</body>
 </html>

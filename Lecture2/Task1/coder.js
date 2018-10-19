@@ -1,7 +1,7 @@
 function encrypt() {
-	var x=document.getElementById('number1').value;
+	var x=document.getElementById('number').value;
 	x = parseInt(x);
-	var text= document.getElementById('text1').value;
+	var text= document.getElementById('text').value;
 	var i=0;
 	var letter;
 	var result="";
@@ -17,12 +17,12 @@ function encrypt() {
 		result+=letter;
 		i+=1
 	}
-	document.getElementById('retext1').value=result;
+	document.getElementById('retext').value=result;
 }
 function decrypt() {
-	var x=document.getElementById('number2').value;
+	var x=document.getElementById('number').value;
 	x = parseInt(x);
-	var text= document.getElementById('text2').value;
+	var text= document.getElementById('text').value;
 	var i=0;
 	var letter;
 	var result="";
@@ -38,5 +38,5 @@ function decrypt() {
 		result+=letter;
 		i+=1
 	}
-	document.getElementById('retext2').value=result;
+	document.getElementById('retext').value=result;
 }
