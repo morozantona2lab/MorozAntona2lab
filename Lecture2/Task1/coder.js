@@ -7,12 +7,15 @@ function encrypt() {
 	var result="";
 	while(i<text.length){
 		letter=text.charCodeAt(i);
-		x=x%26;
-		if (letter<91){ letter-=26;}
-		letter=letter+x;
-		if (letter>122){ letter-=26;}
-		if (letter<65){ letter+=26;}
-		if (letter==32+x){ letter-=x;}
+		if ((letter<65)||((letter>90)&&(letter<97))||(letter>122)){x=0;}else{
+			x=document.getElementById('number').value;
+			x = parseInt(x);
+			x=x%26;
+			if ((letter>64)&&(letter<91)){ letter-=26;}
+			letter+=x;
+			if (letter>122){ letter-=26;}
+			if (letter<65){ letter+=26;}
+		}
 		letter=String.fromCharCode(letter);
 		result+=letter;
 		i+=1
@@ -28,12 +31,14 @@ function decrypt() {
 	var result="";
 	while(i<text.length){
 		letter=text.charCodeAt(i);
-		x=x%26;
-		if (letter>90){ letter+=26;}
-		letter=letter-x;
-		if (letter>122){ letter-=26;}
+		if ((letter<65)||((letter>90)&&(letter<97))||(letter>122)){x=0;}else{
+			x=document.getElementById('number').value;
+			x = parseInt(x);
+			x=x%26;
+			if ((letter-x>90)&&(letter-x<97)){ letter+=26;}
+		letter-=x;
 		if (letter<65){ letter+=26;}
-		if (letter-x==32){ letter-=x;}
+	}
 		letter=String.fromCharCode(letter);
 		result+=letter;
 		i+=1
