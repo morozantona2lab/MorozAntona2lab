@@ -1,0 +1,19 @@
+dy {
+	margin-top: 20%;
+	margin-left: 40%;
+	font-family:"Helvetica";
+	font-size: 20px
+}
+button{
+	margin-left: 50px;
+	border-radius: 5px
+}
+.login{
+	padding-left: 65px
+}
+.password{
+	padding-left: 50px
+}
+div{
+	position: fixed;
+}
